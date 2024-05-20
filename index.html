@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - A Day In My Life</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <a class="teks-nav" href="index.html">WHO AM I?</a>
+        <a href="index.html" id="nav-work" class="nav-link active">
+            Home
+        </a>
+        <div class="dropdown">
+            <a href="#" id="nav-tugas" class="nav-link">
+                About Me <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dropdown-content">
+                <a href="favorite.html">favorite</a>
+                <a href="aday.html">A day In My life</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" id="nav-tugas" class="nav-link">
+                My Hobby <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dropdown-content">
+                <a href="hobi.html">Hobby</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Header with Greeting and DateTime -->
+    <div class="header-info">
+        <b><div id="greeting" class="greeting"></div></b>
+        <b><div id="datetime" class="datetime"></div></b>
+    </div>
+
+    <section class="home" id="home">
+        <div class="container">
+            <img src="jj.png" width="250">
+            <div class="text">
+                <h1>WELLCOME TO MY WEBSITE</h1>
+                <h2>DON'T FORGET! Click Button untuk mendapatkan notifikasi</h2>
+                <button onclick="showAlert()">
+                    CLICK
+                </button>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer class="footer">
+        <div class="container-footer">
+            <p>SOCIAL MEDIA</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/khalifrasyidii?igsh=MWFtNmgwZzFzOXFlMQ=="><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@jekopatriot?_t=8m7xH9bsHMl&_r=1"><i class="fab fa-tiktok"></i></a>
+                <a href="https://github.com/MuhammadKhalifRasyidi"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

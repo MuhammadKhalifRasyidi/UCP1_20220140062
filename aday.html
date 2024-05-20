@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Day In My Life</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+         /* Custom CSS for this page */
+         .sidebar {
+            width: 250px;
+            padding: 20px;
+        }
+
+        .sidebar h2 {
+            font-size: 24px;
+            margin-top: 55px;
+        }
+
+        .sidebar p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .carousel-container {
+            flex: 1;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .card {
+            flex: 0 0 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .card img {
+            width: 95%;
+            height: auto ;
+            object-fit: cover;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgb(168, 19, 31);
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <a class="teks-nav" href="aday.html">A Day In My Life</a>
+        <a href="index.html" id="nav-work" class="nav-link active">
+            Home
+        </a>
+        <div class="dropdown">
+            <a href="#" id="nav-tugas" class="nav-link">
+                About Me <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dropdown-content">
+                <a href="favorite.html">favorite</a>
+                <a href="aday.html">A day In My life</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" id="nav-tugas" class="nav-link">
+                My Hobby <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dropdown-content">
+                <a href="hobi.html">Hobby</a>
+            </div>
+        </div>
+    </header>
+    
+    <section class="home" id="home">
+        <div class="container">
+            <div class="sidebar">
+                <h2>Welcome to My Day</h2>
+                <p>Gym bukan hanya tentang membentuk tubuh, tetapi juga tentang membentuk mental. Setiap angkat beban adalah langkah menuju versi terbaik diri Anda. Semangat, konsistensi, dan tekad adalah kuncinya. Tetap fokus pada tujuan Anda dan nikmati perjalanan ke arah kebugaran dan kesehatan yang lebih baik!</p>
+            </div>
+                <div class="carousel-container">
+                    <buttonC class="prev" onclick="prevSlide()">&#10094;</buttonC>
+                    <div class="carousel">
+                        <div class="card">
+                            <img src="img1.jpeg" alt="Image 1">
+                        </div>
+                        <div class="card">
+                            <img src="img2.jpeg" alt="Image 2">
+                        </div>
+                        <div class="card">
+                            <img src="img3.jpeg" alt="Image 3">
+                        </div>
+                    </div>
+                    <buttonC class="next" onclick="nextSlide()">&#10095;</buttonC>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Header with Greeting and DateTime -->
+     <div class="header-info">
+        <b><div id="greeting" class="greeting"></div></b>
+        <b><div id="datetime" class="datetime"></div></b>
+    </div>
+
+    <footer class="footer">
+        <div class="container-footer">
+            <p>SOCIAL MEDIA</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/khalifrasyidii?igsh=MWFtNmgwZzFzOXFlMQ=="><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@jekopatriot?_t=8m7xH9bsHMl&_r=1"><i class="fab fa-tiktok"></i></a>
+                <a href="https://github.com/MuhammadKhalifRasyidi"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+
+
+        // JavaScript for carousel
+        var slideIndex = 0;
+
+        function showSlide() {
+            var slides = document.querySelectorAll('.card');
+            if (slideIndex >= slides.length) {
+                slideIndex = 0;
+            } else if (slideIndex < 0) {
+                slideIndex = slides.length - 1;
+            }
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex].style.display = "block";
+        }
+
+        function nextSlide() {
+            slideIndex++;
+            showSlide();
+        }
+
+        function prevSlide() {
+            slideIndex--;
+            showSlide();
+        }
+
+        showSlide();
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

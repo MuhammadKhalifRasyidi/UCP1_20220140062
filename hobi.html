@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY HOBBY</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .navbar {
+            position: fixed;
+            width: 100%;
+            background-color: #000000; /* hitam untuk latar belakang navbar */
+            padding: 15px;
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 30px; /* Tambahkan margin-top untuk memberi ruang antara navbar dan header-info */
+            z-index: 1000;
+        }
+        
+        div {
+            display: inline-block; /* Membuat div berjejer secara horizontal */
+            text-align: center; /* Pusatkan konten di tengah */
+        }
+
+        img {
+            display: inline-block; /* Membuat div berjejer secara horizontal */
+            border-image: auto; /* Membuat gambar menjadi bulat */
+            width: 200px; /* Mengatur ukuran gambar */
+            display: block; /* Agar gambar berada di tengah */
+            margin: 50px 105px; /* Mengatur margin agar gambar berada di tengah */
+            transition: transform 0.3s ease; /* Animasi ketika dihover */
+        }
+
+        img:hover {
+            transform: scale(1.1); /* Perbesar gambar saat dihover */
+        }
+
+        p {
+            margin-top: 10px; /* Beri jarak antara gambar dan teks */
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <a class="teks-nav" href="hobi.html">HOBBIES</a>
+        <a href="index.html" id="nav-work" class="nav-link active">
+            Home
+        </a>
+        <div class="dropdown">
+            <a href="#" id="nav-tugas" class="nav-link">
+                About Me <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dropdown-content">
+                <a href="favorite.html"> favorite</a>
+                <a href="aday.html">A day In My life</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" id="nav-tugas" class="nav-link">
+                My Hobby <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dropdown-content">
+                <a href="hobi.html">Hobby</a>
+            </div>
+        </div>
+    </header>
+
+        <div>
+            <img src="gym.jpg" width="200" title="GYM">   
+            <p>GYM</p>
+        </div>
+        <div>
+            <img src="jalan.jpg" width="200" title="jalan-jalan">
+            <p>Jalan-jalan</p>
+        </div>
+        <div>
+            <img src="billiard.jpg" width="200" title="Billiard">
+            <p>Billiard</p>
+        </div>
+
+    <!-- Header with Greeting and DateTime -->
+    <div class="header-info">
+        <b><div id="greeting" class="greeting"></div></b>
+        <b><div id="datetime" class="datetime"></div></b>
+    </div>
+
+    <footer class="footer">
+        <div class="container-footer">
+            <p>SOCIAL MEDIA</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/khalifrasyidii?igsh=MWFtNmgwZzFzOXFlMQ=="><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@jekopatriot?_t=8m7xH9bsHMl&_r=1"><i class="fab fa-tiktok"></i></a>
+                <a href="https://github.com/MuhammadKhalifRasyidi"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
